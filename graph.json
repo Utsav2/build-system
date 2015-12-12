@@ -1,0 +1,30 @@
+{
+  "a" : {
+    "deps" : ["b", "c", "d"],
+    "cmd" : "touch a"
+  },
+  "b" : {
+    "deps" : [],
+    "cmd" : "touch b"
+  },
+  "c" : {
+    "deps" : ["--help"],
+    "cmd" : "touch c"
+  },
+  "d" : {
+    "deps" : ["f"],
+    "cmd" : "touch d"
+  },
+  "e" : {
+    "deps" : ["f"],
+    "cmd" : "touch e"
+  },
+  "f" : {
+    "deps" : [],
+    "cmd" : "touch f"
+  },
+  "--help" : {
+    "deps" : ["d"],
+    "cmd" : "touch ./--help"
+  }
+}
